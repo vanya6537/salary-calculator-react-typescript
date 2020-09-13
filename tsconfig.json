@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "noEmit": true,
+    "jsx": "react",
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "allowJs": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": [
+        "src/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@types/*": [
+        "src/types/*"
+      ],
+      "@store/*": [
+        "src/store/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "include": [
+    "./**/*",
+    ".eslintrc.js"
+  ]
+}
