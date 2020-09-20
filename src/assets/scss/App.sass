@@ -1,0 +1,155 @@
+$primary-color: #7c5ff1
+$secondary-color: darkorange
+$text-color: white
+$gray-secondary: #adb5bd
+/* RADIO STYLES */
+
+/* This is the default state */
+.custom-radio .custom-control-label::before
+  background-color: white
+/* orange */
+
+
+/* This is the checked state */
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before,
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after
+  background-color: black
+  border-radius: 50%
+  overflow: hidden
+
+
+/* active state i.e. displayed while the mouse is being pressed down */
+.custom-radio .custom-control-input:active ~ .custom-control-label::before
+  color: #fff
+  background-color: black
+/* red */
+
+
+/* the shadow displayed while the element is in focus */
+.custom-radio .custom-control-input:focus ~ .custom-control-label::before
+  //box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0,1) /* pink, 25% opacity */
+  box-shadow: none
+
+
+/* SWITCH STYLES */
+/* This is the default state */
+.custom-switch .custom-control-label::before
+  //background-color: darkorange  /* orange */
+  border: 2px solid $gray-secondary
+
+
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before
+  border: 2px solid $gray-secondary
+
+
+/* This is the checked state */
+.custom-switch .custom-control-input:checked ~ .custom-control-label::before
+  background-color: darkorange
+  border: 2px solid darkorange
+
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after
+//background-color: black
+//background-color: #ff8c00  /* orange */
+
+/* this bg image SVG is just a white circle, you can replace it with any valid SVG code */
+//background-image: url("data:image/svg+xmlcharset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E")
+//border-radius: 50%
+
+
+/* active state i.e. displayed while the mouse is being pressed down */
+.custom-switch .custom-control-input:active ~ .custom-control-label::before
+  //color: #fff
+  background-color: white
+/* orange */
+
+//background-color: black /* red */
+
+
+/* the shadow displayed while the element is in focus */
+.custom-switch .custom-control-input:focus ~ .custom-control-label::before
+  //box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem darkorange /* pink, 25% opacity */
+  box-shadow: none
+
+
+.app-wrapper
+  min-height: 100vh
+  transition: all 0.1s ease-in-out
+
+  label:before, label:after
+    cursor: pointer
+
+
+.app
+
+  max-width: 400px
+  margin: auto
+
+  & input#monthlyAmount
+    border-radius: 50px
+    font-weight: bold
+    max-width: 150px
+    width: 150px
+    border: 1px solid black
+
+
+  & #info-board
+    background-color: rgba(255, 238, 204, 0.62)
+
+
+  & #color-changer
+    background-color: $primary-color
+    border: 1px solid $text-color
+
+    &:focus
+      outline: none !important
+      box-shadow: none !important
+
+
+.redesign
+  background-color: $primary-color
+
+  & *
+    color: $text-color
+    font-weight: bold
+
+
+  .text-black-50
+    color: $text-color !important
+
+
+  & #info-board
+    background-color: darken($primary-color,3)
+
+
+  & input#monthlyAmount
+    background-color: $primary-color
+    border: 3px solid white
+    border-radius: 50px
+    font-weight: bold
+    max-width: 150px
+    width: 150px
+
+
+  & #color-changer
+    background-color: $text-color
+    color: $primary-color
+    //border: 1px solid $text-color
+
+
+  .custom-control-input:focus:not(:checked) ~ .custom-control-label::before
+    background-color: rgba(255, 255, 255, 1) !important
+
+
+  .custom-control-input:checked ~ .custom-control-label::before
+    background-color: $secondary-color !important
+    border-color: $secondary-color !important
+
+
+  /* This is the checked state */
+
+  .custom-radio .custom-control-input:checked ~ .custom-control-label::before,
+  .custom-radio .custom-control-input:checked ~ .custom-control-label::after
+    background: $secondary-color
+    border-radius: 50%
+    overflow: hidden
