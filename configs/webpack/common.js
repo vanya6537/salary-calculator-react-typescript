@@ -1,6 +1,6 @@
 // shared config (dev and prod)
 const path = require("path");
-const {CheckerPlugin} = require("awesome-typescript-loader");
+const { CheckerPlugin } = require("awesome-typescript-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
@@ -26,14 +26,14 @@ module.exports = {
         test: /\.css$/,
         use: [
           "style-loader",
-          {loader: "css-loader", options: {importLoaders: 1}},
+          { loader: "css-loader", options: { importLoaders: 1 } },
         ],
       },
       {
         test: /\.(scss|sass)$/,
         loaders: [
           "style-loader",
-          {loader: "css-loader", options: {importLoaders: 1}},
+          { loader: "css-loader", options: { importLoaders: 1 } },
           "sass-loader",
         ],
       },
@@ -48,7 +48,7 @@ module.exports = {
   },
   plugins: [
     new CheckerPlugin(),
-    new HtmlWebpackPlugin({template: "index.html.ejs"}),
+    new HtmlWebpackPlugin({ template: "index.html.ejs" }),
   ],
   externals: {
     react: "React",
