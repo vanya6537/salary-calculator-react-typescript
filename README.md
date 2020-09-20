@@ -18,7 +18,7 @@
 ## Usage
 **Development**
 
-`yarn run start-dev`
+`yarn run start`
 
 * Build app continuously (HMR enabled)
 * App served @ `http://localhost:8080`
