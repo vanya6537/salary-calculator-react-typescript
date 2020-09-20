@@ -1,4 +1,7 @@
 # Salary Calculator with React Webpack Typescript
+Languages:
+* **Russian**: [Check the Demo](https://salary-calculator-react-typescript.vercel.app)
+* **English**: In development
 > With hot module replacement (HMR) for rapid development.
 
 * **[React](https://facebook.github.io/react/)** (16.x)
